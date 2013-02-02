@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<decorators defaultdir="/WEB-INF/decorators"> 
+    <excludes> 
+        <pattern>/styles/*</pattern> 
+        <pattern>/scripts/*</pattern> 
+        <pattern>/images/*</pattern> 
+        <pattern>/*ajax=true*</pattern>
+        <pattern>/index.html</pattern>
+        <pattern>/*HelloWorld.action*</pattern>
+        <pattern>/*savecode.action*</pattern>
+        <pattern>/*phonefortune.action*</pattern> 
+    </excludes> 
+ 
+    <decorator name="layout" page="layout.jsp"> 
+        <pattern>/*</pattern> 
+    </decorator> 
+</decorators> 

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"       
+          "http://struts.apache.org/dtds/struts-2.0.dtd">
+<!-- 
+  - This file is included by the struts.xml file as an example
+  - of how to break up the configuration file into multiple files.
+-->
+<struts>
+  <package name="codebank" namespace="/" extends="struts-default">
+    <action name="listcode" method="list" class="com.osify.apps.codebank.action.PostCodeAction">
+      <result name="error">/error.jsp</result>
+      <result name="success">/jsp/postcode/listCodes.jsp</result>
+    </action>
+    <action name="addcode" method="add" class="com.osify.apps.codebank.action.PostCodeAction">
+      <result name="error">/error.jsp</result>
+      <result name="success">/jsp/postcode/addCode.jsp</result>
+    </action>
+    <action name="editcode" method="add" class="com.osify.apps.codebank.action.PostCodeAction">
+      <result name="error">/error.jsp</result>
+      <result name="success">/jsp/postcode/addCode.jsp</result>
+    </action>
+    <action name="delcode" method="delete" class="com.osify.apps.codebank.action.PostCodeAction">
+      <result name="error">/error.jsp</result>
+      <result name="success">/jsp/postcode/successCode.jsp</result>
+    </action>
+    
+    <action name="viewcode" method="view" class="com.osify.apps.codebank.action.PostCodeAction">
+      <result name="error">/error.jsp</result>
+      <result name="success">/jsp/postcode/viewCode.jsp</result>
+    </action>
+    <action name="savecode" method="save" class="com.osify.apps.codebank.action.PostCodeAction">
+      <result name="error">/error.jsp</result>
+      <result name="success">/jsp/postcode/successCode.jsp</result>
+    </action>    
+  </package>
+  <package name="jsoncode" namespace="/" extends="json-default">
+      <action name="getJsonLanguage" class="com.osify.apps.codebank.action.JsonAction">
+      <result type="json" />
+    </action>
+  </package>
+  <package name="fortune" namespace="/" extends="struts-default">
+  	<action name="addfortune" method="displayForm" class="com.osify.apps.codebank.action.FortuneAction">
+      <result name="error">/error.jsp</result>
+      <result name="success">/jsp/fortune/addFortune.jsp</result>
+    </action>
+  	<action name="phonefortune" method="phoneNumber" class="com.osify.apps.codebank.action.FortuneAction">
+      <result name="error">/error.jsp</result>
+      <result name="success">/jsp/fortune/resultFortune.jsp</result>
+    </action>
+  </package>
+</struts>
